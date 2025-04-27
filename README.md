@@ -1,5 +1,5 @@
 # Credit Risk Analysis for Loan Default Prediction
-![Dataset](http://kaggle.com/datasets/laotse/credit-risk-dataset)
+
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Machine Learning](https://img.shields.io/badge/-Machine%20Learning-orange)
 ![Data Visualization](https://img.shields.io/badge/-Data%20Visualization-lightgrey)
@@ -27,18 +27,55 @@ This project analyzes historical lending data to:
   - Feature importance analysis
   - AUC-ROC evaluation (0.98 score)
 
+## 📥 Dataset Setup
+
+### Kaggle Dataset
+[![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-blue?logo=kaggle)](https://www.kaggle.com/datasets/laotse/credit-risk-dataset)
+
+1. **Download the dataset**:
+   - Visit the [Credit Risk Dataset](https://www.kaggle.com/datasets/laotse/credit-risk-dataset) on Kaggle
+   - Click "Download" (requires Kaggle account)
+
+2. **File Placement**:
+   ```bash
+   # Create data directory
+   mkdir -p data
+   
+   # Move downloaded CSV to project
+   mv credit_risk_dataset.csv data/
+   ```
+
+### Alternative (Kaggle API)
+```bash
+# Install Kaggle CLI
+pip install kaggle
+
+# Configure API token (follow: https://github.com/Kaggle/kaggle-api#api-credentials)
+kaggle datasets download -d laotse/credit-risk-dataset
+unzip credit-risk-dataset.zip -d data/
+```
+
 ## 📦 Installation
 1. Clone repository:
 ```bash
 git clone https://github.com/Yiming112224/Analyse-du-risque-de-credit-de-pret.git
+cd Analyse-du-risque-de-credit-de-pret
 ```
-2. Install dependencies:
+
+2. Create virtual environment:
+```bash
+python -m venv credit_risk_venv
+source credit_risk_venv/bin/activate  # Linux/Mac
+credit_risk_venv\Scripts\activate    # Windows
+```
+
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
 ## 🛠 Usage
-1. Place your `credit_risk_dataset.csv` in `/data`
+1. Ensure dataset is in `data/credit_risk_dataset.csv`
 2. Run Jupyter notebook:
 ```python
 Projet-Datamining.ipynb
